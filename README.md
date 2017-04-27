@@ -1,6 +1,12 @@
-# CraftyClicks Ruby
+# CraftyClicks
 [![Build Status](https://travis-ci.org/JoeSouthan/craftyclicks-ruby.svg?branch=master)](https://travis-ci.org/JoeSouthan/craftyclicks-ruby)
+[![Code Climate](https://codeclimate.com/github/JoeSouthan/craftyclicks-ruby/badges/gpa.svg)](https://codeclimate.com/github/JoeSouthan/craftyclicks-ruby)
 
+A simple wrapper around the CraftyClicks APIs 🌍
+
+[ClickToAddress](https://craftyclicks.co.uk/docs/global/#json-api) | [RapidAddress](https://craftyclicks.co.uk/docs/postcode-lookup/#json-api)
+
+This is a WIP, expect the implementation to change
 
 ## Installation
 
@@ -20,7 +26,41 @@ Or install it yourself as:
 
 ## Usage
 
+Set your API key
 
+```ruby
+CraftyClicks.configure do |c|
+  c.api_key = 'API_KEY'
+end
+
+```
+
+### [Address lookup](https://craftyclicks.co.uk/docs/global/#json-api):
+
+```ruby
+# find
+CraftyClicks::AddressLookup.new(query: 'Buckingham Palace', country: 'GB').find
+# retrieve
+CraftyClicks::AddressLookup.new(id: '26086283', country: 'GB').retrieve
+```
+
+### [Postcode lookup](https://craftyclicks.co.uk/docs/postcode-lookup/#json-api)
+
+```ruby
+# full_address
+CraftyClicks::PostcodeLookup.new(postcode: 'AA11AA').full_address
+# basic_address
+CraftyClicks::PostcodeLookup.new(postcode: 'AA11AA').basic_address
+```
+
+### [Geocode](https://craftyclicks.co.uk/docs/postcode-lookup/#geocoding)
+
+Use "Postcode lookup" rather than individually geocoding postcodes
+
+```ruby
+# geocode
+CraftyClicks::Geocode.new(postcodes: ['AA11AA', 'AA11AB']).geocode
+```
 
 ## Development
 
