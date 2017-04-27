@@ -1,6 +1,5 @@
 require 'rest-client'
 require 'oj'
-require 'pry'
 
 module CraftyClicks
   class ApiBase
