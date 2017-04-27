@@ -29,6 +29,8 @@ Or install it yourself as:
 Set your API key
 
 ```ruby
+require 'crafty_clicks'
+
 CraftyClicks.configure do |c|
   c.api_key = 'API_KEY'
 end
