@@ -37,6 +37,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry', '~> 0.10'
   spec.add_development_dependency 'fuubar', '~> 2.2'
   spec.add_development_dependency 'codeclimate-test-reporter', '~> 0.6'
-  spec.add_dependency 'rest-client', '~> 2.0'
-  spec.add_dependency 'oj', '~> 3.0'
+  spec.add_dependency 'rest-client', '~> 1.8'
+  spec.add_dependency 'oj', '~> 2.18.5'
 end

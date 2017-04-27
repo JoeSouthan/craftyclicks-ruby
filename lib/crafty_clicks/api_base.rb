@@ -24,7 +24,7 @@ module CraftyClicks
           headers: { content_type: :json, accept: :json }
         )
       )
-    rescue RestClient::Unauthorized, RestClient::Forbidden, RestClient::NotFound => ex
+    rescue RestClient::Unauthorized, RestClient::Forbidden, RestClient::ResourceNotFound => ex
       raise Exceptions::ApiError.new(ex.response), "Unauthorized: #{ex.response}"
     end
 
