@@ -32,7 +32,7 @@ module CraftyClicks
 
     def process_result(request)
       @result = Oj.safe_load(request)
-      @result = @result.is_a?(Array) ? { 'result' => @result } : @result
+      @result = @result.is_a?(Array) ? { 'results' => @result } : @result
       raise Exceptions::ApiError.new(result), "API Error: #{result}" if @result.keys.map { |k| k =~ /error/ }.any?
       @result
     end

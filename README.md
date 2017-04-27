@@ -39,27 +39,27 @@ end
 
 ```ruby
 # find
-CraftyClicks::AddressLookup.new(query: 'Buckingham Palace', country: 'GB').find
+CraftyClicks::AddressLookup.find(query: 'Buckingham Palace', country: 'GB')
 # retrieve
-CraftyClicks::AddressLookup.new(id: '26086283', country: 'GB').retrieve
+CraftyClicks::AddressLookup.retrieve(id: '26086283', country: 'GB')
 ```
 
 ### [Postcode lookup](https://craftyclicks.co.uk/docs/postcode-lookup/#json-api)
 
 ```ruby
 # full_address
-CraftyClicks::PostcodeLookup.new(postcode: 'AA11AA').full_address
+CraftyClicks::PostcodeLookup.full_address(postcode: 'AA11AA')
 # basic_address
-CraftyClicks::PostcodeLookup.new(postcode: 'AA11AA').basic_address
+CraftyClicks::PostcodeLookup.basic_address(postcode: 'AA11AA')
 ```
 
-### [Geocode](https://craftyclicks.co.uk/docs/postcode-lookup/#geocoding)
+#### [Geocode](https://craftyclicks.co.uk/docs/postcode-lookup/#geocoding)
 
 Use "Postcode lookup" rather than individually geocoding postcodes
 
 ```ruby
 # geocode
-CraftyClicks::Geocode.new(postcodes: ['AA11AA', 'AA11AB']).geocode
+CraftyClicks::Geocode.geocode(postcodes: ['AA11AA', 'AA11AB'])
 ```
 
 ## Development

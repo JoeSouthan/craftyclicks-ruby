@@ -1,41 +1,35 @@
 module CraftyClicks
   class PostcodeLookup
-    def initialize(postcode:, geocode: true, sort: nil, response_format: :paf_compact, lines: 2)
-      @postcode = postcode
-      @geocode = geocode
-      @sort = sort
-      @response_format = response_format
-      @lines = lines
+    attr_accessor :postcode, :geocode, :sort, :response_format, :lines
+
+    def initialize(service, args)
+      @service = service
+      @args = args
     end
 
-    def full_address
+    def self.full_address(*args)
+      new(:rapidaddress, args).make_request
+    end
+
+    def self.basic_address(*args)
+      new(:basicaddress, args).make_request
+    end
+
+    def make_request
+      postcode, geocode, sort, response_format, lines = *@args
+
       ApiBase.new(
         product: :postcode,
-        service: :rapidaddress,
+        service: @service,
         http_method: :post,
-        params: address_params,
+        params: {
+          postcode: postcode,
+          include_geocode: geocode,
+          sort: sort,
+          response: response_format,
+          lines: lines,
+        }
       ).perform_request
-    end
-
-    def basic_address
-      ApiBase.new(
-        product: :postcode,
-        service: :basicaddress,
-        http_method: :post,
-        params: address_params,
-      ).perform_request
-    end
-
-    private
-
-    def address_params
-      {
-        postcode: @postcode,
-        include_geocode: @geocode,
-        sort: @sort,
-        response: @response_format,
-        lines: @lines,
-      }
     end
   end
 end
