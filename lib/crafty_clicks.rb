@@ -2,7 +2,6 @@ require 'crafty_clicks/address_lookup'
 require 'crafty_clicks/api_base'
 require 'crafty_clicks/api_base/exceptions'
 require 'crafty_clicks/configuration'
-require 'crafty_clicks/geocode'
 require 'crafty_clicks/postcode_lookup'
 require 'crafty_clicks/version'
 

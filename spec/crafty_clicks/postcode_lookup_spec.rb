@@ -16,4 +16,11 @@ RSpec.describe CraftyClicks::PostcodeLookup, :vcr do
       expect(subject['thoroughfares']).to_not be_empty
     end
   end
+
+  describe '#geocode' do
+    subject { CraftyClicks::PostcodeLookup.geocode(postcodes: ['AA11AA', 'AA11AB']) }
+    it 'returns some results' do
+      expect(subject['results']).to_not be_empty
+    end
+  end
 end

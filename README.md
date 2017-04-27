@@ -47,14 +47,7 @@ CraftyClicks::AddressLookup.retrieve(id: '26086283', country: 'GB')
 ```ruby
 CraftyClicks::PostcodeLookup.full_address(postcode: 'AA11AA')
 CraftyClicks::PostcodeLookup.basic_address(postcode: 'AA11AA')
-```
-
-#### [Geocode](https://craftyclicks.co.uk/docs/postcode-lookup/#geocoding)
-
-Use "Postcode lookup" rather than individually geocoding postcodes
-
-```ruby
-CraftyClicks::Geocode.geocode(postcodes: ['AA11AA', 'AA11AB'])
+CraftyClicks::PostcodeLookup.geocode(postcodes: ['AA11AA', 'AA11AB'])
 ```
 
 ## Development
