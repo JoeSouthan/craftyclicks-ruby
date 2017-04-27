@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://pcls1.craftyclicks.co.uk/json/missing_endpoint
+    body:
+      encoding: UTF-8
+      string: '{"postcode":"EC1A 9HF","key":"API_KEY"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.1.0 x86_64) ruby/2.3.3p222
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '55'
+      Host:
+      - pcls1.craftyclicks.co.uk
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Thu, 27 Apr 2017 15:36:40 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '219'
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: UTF-8
+      string: |
+        <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+        <html><head>
+        <title>404 Not Found</title>
+        </head><body>
+        <h1>Not Found</h1>
+        <p>The requested URL /json/missing_endpoint was not found on this server.</p>
+        </body></html>
+    http_version:
+  recorded_at: Thu, 27 Apr 2017 15:36:40 GMT
+recorded_with: VCR 3.0.3

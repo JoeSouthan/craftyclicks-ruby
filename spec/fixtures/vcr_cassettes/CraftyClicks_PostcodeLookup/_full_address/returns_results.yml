@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://pcls1.craftyclicks.co.uk/json/rapidaddress
+    body:
+      encoding: UTF-8
+      string: '{"postcode":"AA11AA","include_geocode":true,"sort":null,"response":"paf_compact","lines":2,"key":"API_KEY"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.1.0 x86_64) ruby/2.3.3p222
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '123'
+      Host:
+      - pcls1.craftyclicks.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Apr 2017 14:34:25 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Sat, 10 Mar 2008 11:00:00 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, content-type
+      Content-Length:
+      - '1805'
+      Connection:
+      - close
+      Content-Type:
+      - text/javascript; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"thoroughfare_count":1,"thoroughfares":[{"delivery_points":[{"organisation_name":"THE
+        BAKERY","department_name":"","po_box_number":"","building_number":"1","sub_building_name":"","building_name":"","udprn":"12345678","dps":"1A"},{"organisation_name":"FILMS
+        R US","department_name":"","po_box_number":"","building_number":"3","sub_building_name":"","building_name":"","udprn":"12345679","dps":"1B"},{"organisation_name":"FAMILY
+        BUTCHER","department_name":"","po_box_number":"","building_number":"7","sub_building_name":"","building_name":"","udprn":"12345680","dps":"1C"},{"organisation_name":"","department_name":"","po_box_number":"","building_number":"","sub_building_name":"","building_name":"BIG
+        HOUSE","udprn":"12345681","dps":"1D"},{"organisation_name":"","department_name":"","po_box_number":"","building_number":"17","sub_building_name":"","building_name":"LITTLE
+        COTTAGE","udprn":"12345682","dps":"2A"}],"delivery_point_count":5,"dependent_thoroughfare_name":"","dependent_thoroughfare_descriptor":"","thoroughfare_name":"HIGH","thoroughfare_descriptor":"STREET"}],"postal_county":"POSTAL
+        COUNTY","traditional_county":"TRADITIONAL COUNTY","dependent_locality":"CRAFTY
+        VALLEY","double_dependent_locality":"","town":"BIG CITY","postcode":"AA1 1AA","geocode":{"lat":51.5132253,"lng":-0.0748047,"os":{"easting":533689,"northing":181123,"country_code":"annnnnnnn","country_text":"Country
+        Name","nhs_regional_ha_code":"annnnnnnn","nhs_regional_ha_text":"Dummy Reg
+        HA Code","nhs_ha_code":"annnnnnnn","nhs_ha_text":"Dummy HA Code","administrative_county_code":"annnnnnnn","administrative_county_text":"Dummy
+        County Code","administrative_district_code":"annnnnnnn","administrative_district_text":"Dummy
+        District Code","administrative_ward_code":"annnnnnnn","administrative_ward_text":"Dummy
+        Ward Code"}}}'
+    http_version:
+  recorded_at: Thu, 27 Apr 2017 14:34:25 GMT
+recorded_with: VCR 3.0.3

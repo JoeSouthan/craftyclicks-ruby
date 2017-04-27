@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'crafty_clicks'
+
+CraftyClicks.configure do |c|
+  c.api_key = 'API_KEY'
+end
+
+require "pry"
+Pry.start

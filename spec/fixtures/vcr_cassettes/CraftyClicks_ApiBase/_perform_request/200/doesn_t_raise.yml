@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://pcls1.craftyclicks.co.uk/json/rapidaddress
+    body:
+      encoding: UTF-8
+      string: '{"postcode":"EC1A 9HF","key":"API_KEY"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.1.0 x86_64) ruby/2.3.3p222
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '55'
+      Host:
+      - pcls1.craftyclicks.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Apr 2017 15:35:33 GMT
+      Server:
+      - Apache
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Sat, 10 Mar 2008 11:00:00 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, content-type
+      Content-Length:
+      - '753'
+      Connection:
+      - close
+      Content-Type:
+      - text/javascript; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '{"thoroughfare_count":1,"thoroughfares":[{"delivery_points":[{"organisation_name":"ADVANCE
+        INTERNATIONAL MEDIA LTD","department_name":"","po_box_number":"","building_number":"","sub_building_name":"","building_name":"6-8","udprn":"08166887","dps":"1F"},{"organisation_name":"SAUNDERSON
+        HOUSE LTD","department_name":"","po_box_number":"","building_number":"","sub_building_name":"","building_name":"1-5","udprn":"08166886","dps":"1G"}],"delivery_point_count":2,"dependent_thoroughfare_name":"","dependent_thoroughfare_descriptor":"","thoroughfare_name":"LONG","thoroughfare_descriptor":"LANE"}],"postal_county":"GREATER
+        LONDON","traditional_county":"MIDDLESEX","dependent_locality":"","double_dependent_locality":"","town":"LONDON","postcode":"EC1A
+        9HF"}'
+    http_version:
+  recorded_at: Thu, 27 Apr 2017 15:35:33 GMT
+recorded_with: VCR 3.0.3

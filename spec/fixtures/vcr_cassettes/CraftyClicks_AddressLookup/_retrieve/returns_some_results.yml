@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.craftyclicks.co.uk/address/1.1/retrieve
+    body:
+      encoding: UTF-8
+      string: '{"country":"GB","id":"26086283","lines":2,"key":"API_KEY"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.1.0 x86_64) ruby/2.3.3p222
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '74'
+      Host:
+      - api.craftyclicks.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Apr 2017 14:30:11 GMT
+      Server:
+      - Apache/2.4.18 (Ubuntu)
+      Content-Length:
+      - '1255'
+      Etag:
+      - 2cf97afce6ecb7aaf8621c5ca322707d
+      Cache-Control:
+      - max-age=0, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, content-type, authorization
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "result": {
+                "administrative_area": "",
+                "alternative_administrative_area": "",
+                "alternative_locality": "",
+                "alternative_province": "Middlesex",
+                "building_name": "",
+                "building_number": "",
+                "company_name": "Buckingham Palace",
+                "country_name": "United Kingdom",
+                "department_name": "",
+                "dependent_locality": "",
+                "dependent_street_name": "",
+                "dependent_street_prefix": "",
+                "dependent_street_suffix": "",
+                "double_dependent_locality": "",
+                "double_dependent_street_name": "",
+                "double_dependent_street_prefix": "",
+                "double_dependent_street_suffix": "",
+                "level_name": "",
+                "line_1": "",
+                "line_2": "",
+                "line_3": "",
+                "line_4": "",
+                "line_5": "",
+                "locality": "London",
+                "post_office_box_number": "",
+                "post_office_reference_1": "23747212",
+                "post_office_reference_2": "1A",
+                "postal_code": "SW1A 1AA",
+                "province": "",
+                "province_code": "London",
+                "province_name": "London",
+                "street_name": "",
+                "street_prefix": "",
+                "street_suffix": "",
+                "sub_building_name": "",
+                "unit_name": ""
+            }
+        }
+    http_version:
+  recorded_at: Thu, 27 Apr 2017 14:30:11 GMT
+recorded_with: VCR 3.0.3

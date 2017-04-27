@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.craftyclicks.co.uk/address/1.1/find
+    body:
+      encoding: UTF-8
+      string: '{"query":"Buckingham Palace","country":"GB","id":null,"ip":null,"coords":[],"key":"API_KEY"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (darwin16.1.0 x86_64) ruby/2.3.3p222
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '108'
+      Host:
+      - api.craftyclicks.co.uk
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Apr 2017 14:28:57 GMT
+      Server:
+      - Apache/2.4.18 (Ubuntu)
+      Content-Length:
+      - '837'
+      Etag:
+      - fb3c05fe2cd82bf13c273e6ea9f87af9
+      Cache-Control:
+      - max-age=0, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, content-type, authorization
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "results": [
+                {
+                    "id": "||22980101169|802154",
+                    "count": 446,
+                    "labels": [
+                        "SW1W",
+                        "Buckingham Palace Road, London"
+                    ]
+                },
+                {
+                    "id": "62887996022||22980070151|802154",
+                    "count": 2,
+                    "labels": [
+                        "SW1W 0AE",
+                        "Lower Grosvenor Place, London"
+                    ]
+                },
+                {
+                    "id": "26086283",
+                    "count": 1,
+                    "labels": [
+                        "SW1A 1AA",
+                        "Buckingham Palace, , London"
+                    ]
+                },
+                {
+                    "id": "26087150",
+                    "count": 1,
+                    "labels": [
+                        "SW1E 5HS",
+                        "Buckingham Coffee Lounge, 19-21 Palace Street, London"
+                    ]
+                }
+            ]
+        }
+    http_version:
+  recorded_at: Thu, 27 Apr 2017 14:28:58 GMT
+recorded_with: VCR 3.0.3
