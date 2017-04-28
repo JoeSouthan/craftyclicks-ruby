@@ -8,10 +8,9 @@ module CraftyClicks
     POSTCODE_ENDPOINT = 'http://pcls1.craftyclicks.co.uk/json'.freeze
 
     def initialize(product:, service:, params: {}, http_method: :get)
-      @config = CraftyClicks.configuration
       @product = self.class.const_get("#{product.upcase}_ENDPOINT")
       @service = service
-      @params = params.merge(key: @config.api_key)
+      @params = params.merge(key: CraftyClicks.configuration.api_key)
       @http_method = http_method
     end
 
@@ -20,12 +19,14 @@ module CraftyClicks
         RestClient::Request.execute(
           method: @http_method,
           url: "#{@product}/#{@service}",
-          payload: Oj.to_json(@params),
+          payload: @params.to_json,
           headers: { content_type: :json, accept: :json }
         )
       )
     rescue RestClient::Unauthorized, RestClient::Forbidden, RestClient::ResourceNotFound => ex
       raise Exceptions::ApiError.new(ex.response), "Unauthorized: #{ex.response}"
+    rescue RestClient::InternalServerError => ex
+      raise Exceptions::ApiError.new(ex.response), "Server error: #{ex.response}"
     end
 
     private
