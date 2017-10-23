@@ -6,8 +6,6 @@ A simple wrapper around the CraftyClicks APIs 🌍
 
 [ClickToAddress](https://craftyclicks.co.uk/docs/global/#json-api) | [RapidAddress](https://craftyclicks.co.uk/docs/postcode-lookup/#json-api)
 
-This is a WIP, expect the implementation to change
-
 ## Installation
 
 Add this line to your application's Gemfile:
