@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'crafty_clicks/address_lookup'
 require 'crafty_clicks/api_base'
 require 'crafty_clicks/api_base/exceptions'

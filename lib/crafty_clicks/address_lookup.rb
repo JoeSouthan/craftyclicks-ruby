@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CraftyClicks
   class AddressLookup
     def self.find(query:, country:, id: nil, ip_address: nil, coords: [])

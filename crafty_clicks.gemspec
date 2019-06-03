@@ -1,4 +1,6 @@
-lib = File.expand_path('../lib', __FILE__)
+# frozen_string_literal: true
+
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'crafty_clicks/version'
 
@@ -11,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'A simple wrapper around the CraftClicks API'
   spec.homepage      = 'https://www.github.com/JoeSouthan/craftyclicks-ruby'
   spec.license       = 'MIT'
-  spec.required_ruby_version = '>= 2.1'
+  spec.required_ruby_version = '>= 2.4'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
@@ -26,9 +28,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'fuubar', '~> 2.2'
   spec.add_development_dependency 'pry', '~> 0.10'
   spec.add_development_dependency 'rake', '~> 12'
+  spec.add_development_dependency 'relaxed-rubocop'
   spec.add_development_dependency 'rspec', '~> 3'
   spec.add_development_dependency 'rubocop', '~> 0.71'
-  spec.add_development_dependency 'relaxed-rubocop'
   spec.add_development_dependency 'simplecov', '~> 0.15'
   spec.add_development_dependency 'vcr', '~> 4'
   spec.add_development_dependency 'webmock', '~> 3.5'

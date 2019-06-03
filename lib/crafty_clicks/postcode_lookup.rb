@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CraftyClicks
   class PostcodeLookup
     attr_accessor :postcode, :geocode, :sort, :response_format, :lines
